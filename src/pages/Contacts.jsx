@@ -4,7 +4,7 @@ function Contacts() {
     return (
         <div class="article">
             <div class="container">
-                <h2 class="article__title">Контакти</h2>
+                <h2 class="article__title">Контакти 222</h2>
 
                 <div class="page-content">
                     <p>Якщо вам потрібна допомога або у вас є запитання, будь ласка, зв'яжіться з нами за наступними

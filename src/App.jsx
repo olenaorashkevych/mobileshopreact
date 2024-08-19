@@ -5,7 +5,7 @@ import Layout from "./pages/Layout";
 import Delivery from "./pages/Delivery";
 import Search from "./components/Search";
 import Category from "./pages/Category";
-import Contacts from "./Contacts";
+import Contacts from "./pages/Contacts";
 import Order from "./pages/Order";
 import { createContext, useState } from "react";
 import Mycart from "./components/Mycart";
