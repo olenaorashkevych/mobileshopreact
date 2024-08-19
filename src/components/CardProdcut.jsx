@@ -7,10 +7,7 @@ export default function CardProdcut({ element }) {
 
     function clickhandler() {
         addToCart(element)
-
     }
-
-
 
 
     return (
@@ -22,7 +19,7 @@ export default function CardProdcut({ element }) {
             <div className="card-product__text-hold">
                 <a href="#" className="card-product__title-link">{element.title}</a>
                 <span className="card-product__price">{element.price} грн <small>{element.oldprice} грн</small></span>
-                <a href="#" className="card-product__btn-add js-addcart " onClick={clickhandler}  >
+                <a href="#" className="card-product__btn-add js-addcart " onClick={clickhandler}>
                     <svg className="icon icon-cart">
                         <use href="#icon-cart-add"></use>
                     </svg>
