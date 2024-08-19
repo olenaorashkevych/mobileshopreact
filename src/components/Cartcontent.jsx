@@ -2,7 +2,9 @@ import React, { useContext } from 'react'
 import { Appcontex } from '../App';
 
 export default function Cartcontent({ goodsincart }) {
+
     const { addToCart, cart, cartpreview, setquantity, quantity, updatedcart, changequantity, } = useContext(Appcontex);
+
     return (
         <div key={goodsincart.id} className="cart-added-list__item">
             <button className="cart-added-list__item-btn-delete btn btn-light btn-xxs btn-icon">

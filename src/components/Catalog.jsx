@@ -21,13 +21,11 @@ export default function Catalog() {
         setcatalogue(respjason)
     }
 
-
     async function getcategoires() {
         const response = await fetch("https://667a796bbd627f0dcc8f205a.mockapi.io/categories")
         const responsejson = await response.json()
         setcategorylist(responsejson)
     }
-
 
     function showallcategories() {
         setseecat(!seecat)
