@@ -77,12 +77,10 @@ function App() {
       setcart(updatedcart);
     }
 
-
-
-
   }
+
   return (
-    <Appcontex.Provider value={{ cart, setcart, addToCart, setquantity, quantity, changequantity, changequantityminus, deleteitem }}>
+    <Appcontex.Provider value={{ cart, setcart, addToCart, setquantity, quantity, changequantity, changequantityminus, deleteitem, }}>
       <BrowserRouter >
         <Routes>
           <Route path="/" element={<Layout />}>

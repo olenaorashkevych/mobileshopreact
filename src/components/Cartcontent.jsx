@@ -3,7 +3,7 @@ import { Appcontex } from '../App';
 
 export default function Cartcontent({ goodsincart }) {
 
-    const { addToCart, cart, cartpreview, setquantity, quantity, updatedcart, changequantity, changequantityminus, deleteitem } = useContext(Appcontex);
+    const { addToCart, cart, cartpreview, setquantity, quantity, updatedcart, changequantity, changequantityminus, deleteitem, showcartcontent } = useContext(Appcontex);
 
     return (
         <div key={goodsincart.id} className="cart-added-list__item">
