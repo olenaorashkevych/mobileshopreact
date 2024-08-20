@@ -53,7 +53,8 @@ export default function Catalog() {
                             })}
                         </div>
                     </div>
-                    <h3 className="catalog__products-summ">Знайдено товарів: <span id="view-count-products">6</span></h3>
+                    {(catalogue !== 'Not found') ? <h3 className="catalog__products-summ">Знайдено товарів: <span id="view-count-products">{catalogue.length}</span></h3> :
+                        <h3 className="catalog__products-summ">Знайдено товарів: 0</h3>}
                 </div>
 
                 <div className="catalog__content" id="catalog-products">

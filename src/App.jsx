@@ -13,7 +13,6 @@ import CardProdcut from "./components/CardProdcut";
 
 export const Appcontex = createContext(null)
 
-
 function App() {
 
   const [cart, setcart] = useState([])
@@ -48,10 +47,6 @@ function App() {
       setcart(dublicateCart)
     }
 
-
-
-
-
   }
   const [quantity, setquantity] = useState("10")
 
@@ -60,11 +55,34 @@ function App() {
     const updatedcart = cart.map((item) => item.id == goodsincart.id ? { ...item, count: item.count + 1 } : item
     )
     setcart(updatedcart);
-    console.log(updatedcart);
+
   }
 
+  function deleteitem(goodsincart) {
+    setquantity(goodsincart.count = 0)
+
+    const updatedcart = cart.filter((items) => items.id !== goodsincart.id || items.count !== 0);
+    console.log(updatedcart);
+    setcart(updatedcart);
+
+  }
+  function changequantityminus(goodsincart) {
+
+    const newquantity = goodsincart.count - 1
+    setquantity(newquantity)
+
+    if (newquantity < 1) { deleteitem(goodsincart) }
+    else {
+      const updatedcart = cart.map((item) => item.id == goodsincart.id ? { ...item, count: newquantity } : item)
+      setcart(updatedcart);
+    }
+
+
+
+
+  }
   return (
-    <Appcontex.Provider value={{ cart, setcart, addToCart, setquantity, quantity, changequantity }}>
+    <Appcontex.Provider value={{ cart, setcart, addToCart, setquantity, quantity, changequantity, changequantityminus, deleteitem }}>
       <BrowserRouter >
         <Routes>
           <Route path="/" element={<Layout />}>
