@@ -5,12 +5,11 @@ import Emptycart from "./Emptycart";
 
 export default function Mycart() {
 
+    const { cart } = useContext(Appcontex);
 
-    const { addToCart, cart, cartpreview, setquantity, quantity, updatedcart, changequantity, changequantityminus, deleteitem } = useContext(Appcontex);
     const [activecart, setactivecart] = useState(false)
     function showcartcontent(e) {
         setactivecart(!activecart)
-
     }
     return (
 
