@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Ordersuccess() {
     return (
         <h2 className="title-square title-square--icon title-cart-success no-before">
-            <a href="#" className="title-square__icon">
+            <Link to="/" className="title-square__icon">
                 <svg className="icon icon-check-circle">
                     <use href="#icon-check-circle"></use>
                 </svg>
-            </a>
+            </Link>
             <span className="title-square__main">Замовлення відправлено!</span>
             <span className="title-square__small">
-                <a href="index.html" className="link-hover">
+                <Link to="/ndex.html" className="link-hover">
                     Повернутися до каталогу
-                </a>
+                </Link>
             </span>
         </h2>
     );
