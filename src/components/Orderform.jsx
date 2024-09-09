@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { Appcontex } from "../App";
 
-export default function Orderform() {
+export default function Orderform({ setorderstatus }) {
+    const { cart, setcart } = useContext(Appcontex);
+
     const [formValue, setFormValue] = useState({
         name: "",
         email: "",
@@ -26,15 +29,57 @@ export default function Orderform() {
             ...formValue,
             [inputName]: inputvalue,
         });
+    }
 
-        //
+    // Функцція формування email повідомлення
+    function setEmailMessage() {
+        // Формуємо повідомлення
+        let message = "<h3>Привіт, в тебе нове замовлення</h3>";
+
+        message += `<p>
+                        Контакти: ${formValue.name}
+                            (<a href="mailto:${formValue.email}">
+                                ${formValue.email}
+                            </a>,
+                            <a href="tel:${formValue.phone}">
+                                ${formValue.phone}
+                            </a>) 
+                    </p>`;
+
+        message += `<h3>Замовлені товари:</h3>`;
+
+        let cartList = "";
+
+        cart.map((cartitem) => {
+            cartList += `<li>${cartitem.title} / ${cartitem.price} грн (${cartitem.count})</li>`;
+        });
+
+        message += `<ul>${cartList}</ul>`;
+
+        return message;
     }
 
     // Функція для відправки даних форми
     function submitFormData(e) {
-        console.log("ВІДПРАВляємо", formValue);
+        e.preventDefault();
+        // console.log("ВІДПРАВляємо", formValue);
+
+        // Добавляємо необхдні ключі дял API
+        formValue["to"] = "olenaorashkevych@gmail.com";
+        formValue["subject"] = "you have received a new order";
+        formValue["message"] = setEmailMessage();
+
+        // Відправляємо листа менеджеру
+        fetch("https://api.inderio.com/send-email", { method: "POST", body: JSON.stringify(formValue) });
+
+        // Показуємо блок успішної відправки форми
+        setorderstatus(true);
+
+        // Очищуємо корзину
+        setcart([]);
     }
 
+    // Рендер форми
     return (
         <div className="content-form">
             <form className="form-style form-order" id="form-order" onSubmit={submitFormData}>

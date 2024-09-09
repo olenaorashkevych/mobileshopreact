@@ -1,26 +1,27 @@
 import React from "react";
 import Ordercart from "./Ordercart";
 import Orderform from "./Orderform";
+import { Link } from "react-router-dom";
 
-export default function Ordernotempty() {
+export default function Ordernotempty({ setorderstatus }) {
     return (
         <div className="js-order-form">
             <h2 className="title-square title-square--icon">
-                <a href="index.html" className="title-square__icon">
+                <Link to="/" className="title-square__icon">
                     <svg className="icon icon-cart-bag">
                         <use href="#icon-cart-bag"></use>
                     </svg>
-                </a>
+                </Link>
                 <span className="title-square__small">
-                    <a href="index.html" className="link-hover">
+                    <Link to="/" className="link-hover">
                         Повернутися до каталогу
-                    </a>
+                    </Link>
                 </span>
                 <span className="title-square__main">Форма замовлення</span>
             </h2>
 
             <div className="content-grid content-hold">
-                <Orderform />
+                <Orderform setorderstatus={setorderstatus} />
                 <Ordercart />
             </div>
         </div>
