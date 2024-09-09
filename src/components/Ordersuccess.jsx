@@ -11,7 +11,7 @@ export default function Ordersuccess() {
             </Link>
             <span className="title-square__main">Замовлення відправлено!</span>
             <span className="title-square__small">
-                <Link to="/ndex.html" className="link-hover">
+                <Link to="/" className="link-hover">
                     Повернутися до каталогу
                 </Link>
             </span>
