@@ -8,7 +8,7 @@
     --color-bl: #000;
     --color-bl-rgb: 0, 0, 0;
     --color-wh: #fff;
-    --color-wh-rgb: 255,255,255;
+    --color-wh-rgb: 255, 255, 255;
     --color-placeholder: #adb5bd;
     --color-red: #ef5b55;
     --color-red-rgb: 239, 91, 85;
@@ -85,4 +85,8 @@ svg {
 
 .logo:hover {
     transform: scale(1.1)
+}
+
+.error {
+    color: red;
 }

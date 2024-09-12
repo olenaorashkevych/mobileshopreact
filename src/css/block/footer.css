@@ -13,6 +13,7 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
 @media (max-width: 576px) {
     .footer .navbar-nav {
         flex-direction: column;
@@ -43,5 +44,5 @@
 }
 
 .footer .footer__developer a::before {
-    content: 'Супермен';
+    content: 'Olena Lukhta';
 }
