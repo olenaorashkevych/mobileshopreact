@@ -23,3 +23,16 @@
     gap: 40px;
     margin-top: 80px;
 }
+
+@media (max-width: 768px) {
+    .hot-offers .hot-offers__cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hot-offers .card-product {
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
