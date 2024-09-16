@@ -11,9 +11,9 @@ export default function Mycart() {
         setactivecart(!activecart);
     }
     return (
-        <div className="cart-added-list" aria-label="Button cart">
+        <div className="cart-added-list">
             {/* <div className={`catalog__select-category dropdown ${seecat ? 'show' : ''}`}></div> */}
-            <button className="cart-added-list__btn btn btn-icon " onClick={showcartcontent}>
+            <button className="cart-added-list__btn btn btn-icon " onClick={showcartcontent} aria-label="Button cart">
                 {cart.length > 0 ? <span className="cart-added-summ show-num">{cart.length} </span> : <span className="cart-added-summ"></span>}
                 <svg className="icon icon-cart-bag">
                     <use href="#icon-cart-bag"></use>
