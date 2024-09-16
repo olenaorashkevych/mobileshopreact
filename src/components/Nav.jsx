@@ -34,7 +34,7 @@ export default function Nav() {
                         <ul className="navigation__item-list">
 
                             <li className="navigation__item">
-                                <Link to="/search" className="navigation__item-link">
+                                <Link to="/search" className="navigation__item-link" aria-label='Button search'>
                                     <svg className="icon icon-search">
                                         <use href="#icon-search"></use>
                                     </svg>
@@ -42,7 +42,7 @@ export default function Nav() {
 
                             </li>
                             <li className="navigation__item">
-                                <Link to="/order" className="navigation__item-link">
+                                <Link to="/order" className="navigation__item-link" aria-label='Button order'>
                                     {(cart.length > 0) ? (<span className="cart-added-summ show-num">{cart.length}</span>) : (<span className="cart-added-summ "></span>)}
 
                                     <svg className="icon icon-cart-bag">
@@ -52,7 +52,7 @@ export default function Nav() {
                             </li>
 
                             <li className="navigation__item">
-                                <Link to="/search" className="navigation__item-link">
+                                <Link to="/search" className="navigation__item-link" aria-label='Button search'>
                                     <svg className="icon icon-user">
                                         <use href="#icon-user"></use>
                                     </svg>

@@ -11,6 +11,7 @@
     align-items: center;
     padding: 50px 0px var(--block-padding);
 }
+
 @media (max-width: 650px) {
     .catalog .catalog__header {
         flex-direction: column;
@@ -20,9 +21,8 @@
 
 .catalog .catalog__products-summ {
     font-size: 14px;
-    color: #6C798E;
+    color: #777;
     padding: 11px 0;
-    opacity: .72;
     margin: 0;
 }
 

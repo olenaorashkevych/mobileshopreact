@@ -11,7 +11,7 @@ export default function Mycart() {
         setactivecart(!activecart);
     }
     return (
-        <div className="cart-added-list ">
+        <div className="cart-added-list" aria-label="Button cart">
             {/* <div className={`catalog__select-category dropdown ${seecat ? 'show' : ''}`}></div> */}
             <button className="cart-added-list__btn btn btn-icon " onClick={showcartcontent}>
                 {cart.length > 0 ? <span className="cart-added-summ show-num">{cart.length} </span> : <span className="cart-added-summ"></span>}

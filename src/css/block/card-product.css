@@ -44,14 +44,14 @@
 
 .card-product .card-product__price {
     font-size: 13px;
-    color: #6C798E;
+    color: #333;
     font-weight: 500;
 }
 
 .card-product .card-product__price small {
     position: relative;
     margin: 0 4px;
-    opacity: .8;
+    opacity: .9;
 }
 
 .card-product .card-product__price small::before {

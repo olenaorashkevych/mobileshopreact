@@ -21,13 +21,13 @@ export default function Footer() {
 
                 <div class="footer__social">
                     <div class="social">
-                        <a href="#" rel="nofollow" target="_blank" class="social__item facebook">
+                        <a href="#" rel="nofollow" target="_blank" class="social__item facebook" aria-label="Button social facebook">
                             <svg class="icon icon-facebook"><use href="#icon-facebook"></use></svg>
                         </a>
-                        <a href="#" rel="nofollow" target="_blank" class="social__item instagram">
+                        <a href="#" rel="nofollow" target="_blank" class="social__item instagram" aria-label="Button social instagram">
                             <svg class="icon icon-instagram"><use href="#icon-instagram"></use></svg>
                         </a>
-                        <a href="#" rel="nofollow" target="_blank" class="social__item youtube">
+                        <a href="#" rel="nofollow" target="_blank" class="social__item youtube" aria-label="Button social youtube">
                             <svg class="icon icon-youtube"><use href="#icon-youtube"></use></svg>
                         </a>
                     </div>
@@ -37,7 +37,7 @@ export default function Footer() {
                     <span>Всі права на статті, ілюстрації, інші матеріали належать site.com та охороняються законом України
                         «Про авторське право і суміжні права».<br />При використанні матеріалів посилання на сайт
                         обов'язкове!</span>
-                    <span class="footer__developer">Розробник сайту: <a href="015161815326" target="_blank"></a></span>
+                    <span class="footer__developer">Розробник сайту: <a href="015161815326" target="_blank" aria-label="Button deveveloper"></a></span>
                 </p>
             </div>
         </div>

@@ -9,7 +9,7 @@
     --fz-lg-text: 30px;
     --icon-padding: 14px;
     --icon-color: #7B86AA;
-    
+
     color: var(--color);
     position: relative;
     padding-top: calc(var(--h) / 2.5);
@@ -22,9 +22,11 @@
     line-height: 1.6;
     margin-bottom: 60px;
 }
-.title-square.title-square--icon {    
+
+.title-square.title-square--icon {
     padding-top: calc(var(--h) / 3.6);
 }
+
 .title-square.title-square--icon::after {
     display: none;
 }
@@ -66,7 +68,7 @@
     z-index: 1;
     font-size: var(--fz-sm-text);
     font-weight: 500;
-    color: #6c757d;
+    color: #555;
     padding-bottom: 5px;
     display: inline-block;
 }
@@ -80,13 +82,14 @@
 }
 
 
-.page-content > .container > .title-square {
+.page-content>.container>.title-square {
     --fz-lg-text: 35px;
-	--square-h: 100px;
-	--square-h: 172px;
-	--square-top: 22px;
-	margin: 0 0 100px;
+    --square-h: 100px;
+    --square-h: 172px;
+    --square-top: 22px;
+    margin: 0 0 100px;
 }
-.page-content > .container > .title-square a {
-	--color: #7B86AA;
+
+.page-content>.container>.title-square a {
+    --color: #7B86AA;
 }
