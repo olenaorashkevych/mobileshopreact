@@ -20,6 +20,7 @@ export default function CardProdcut({ element }) {
                     alt={"product" + element.title}
                     className="card-product__img"
                     src={"/img/catalog/" + element.img}
+                    fetchPriority={(element.id === 1) ? 'high' : 'auto'}
                     height="264"
                     width="264" />
             </div>
