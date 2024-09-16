@@ -1,4 +1,5 @@
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Gallery() {
     return (
@@ -15,31 +16,61 @@ export default function Gallery() {
                         <a href="#" className="gallery__item-hover-box">
                             <span className="gallery__item-hash-tag link-hover">#instagram-link</span>
                         </a>
-                        <img src="https://picsum.photos/id/123/270/270" alt="" className="gallery__item-img" />
+
+                        <LazyLoadImage
+                            alt="Social media image"
+                            className="gallery__item-img"
+                            src="https://picsum.photos/id/123/270/270"
+                            height="270"
+                            width="270" />
                     </div>
                     <div className="gallery__item">
                         <a href="#" className="gallery__item-hover-box">
                             <span className="gallery__item-hash-tag link-hover">#instagram-link</span>
                         </a>
-                        <img src="https://picsum.photos/id/124/270/270" alt="" className="gallery__item-img" />
+
+                        <LazyLoadImage
+                            alt="Social media image"
+                            className="gallery__item-img"
+                            src="https://picsum.photos/id/124/270/270"
+                            height="270"
+                            width="270" />
                     </div>
                     <div className="gallery__item">
                         <a href="#" className="gallery__item-hover-box">
                             <span className="gallery__item-hash-tag link-hover">#instagram-link</span>
                         </a>
-                        <img src="https://picsum.photos/id/125/270/270" alt="" className="gallery__item-img" />
+
+                        <LazyLoadImage
+                            alt="Social media image"
+                            className="gallery__item-img"
+                            src="https://picsum.photos/id/125/270/270"
+                            height="270"
+                            width="270" />
                     </div>
                     <div className="gallery__item">
                         <a href="#" className="gallery__item-hover-box">
                             <span className="gallery__item-hash-tag link-hover">#instagram-link</span>
                         </a>
-                        <img src="https://picsum.photos/id/126/270/270" alt="" className="gallery__item-img" />
+
+                        <LazyLoadImage
+                            alt="Social media image"
+                            className="gallery__item-img"
+                            src="https://picsum.photos/id/126/270/270"
+                            height="270"
+                            width="270" />
                     </div>
                     <div className="gallery__item">
                         <a href="#" className="gallery__item-hover-box">
                             <span className="gallery__item-hash-tag link-hover">#instagram-link</span>
                         </a>
-                        <img src="https://picsum.photos/id/127/270/270" alt="" className="gallery__item-img" />
+
+                        <LazyLoadImage
+                            alt="Social media image"
+                            className="gallery__item-img"
+                            src="https://picsum.photos/id/127/270/270"
+                            height="270"
+                            width="270" />
                     </div>
                 </div>
 

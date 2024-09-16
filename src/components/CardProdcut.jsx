@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Appcontex } from "../App";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function CardProdcut({ element }) {
 
@@ -14,7 +15,13 @@ export default function CardProdcut({ element }) {
 
         <div className="card-product">
             <div className="card-product__img-hold">
-                <img src={"/img/catalog/" + element.img} alt="" className="card-product__img" />
+
+                <LazyLoadImage
+                    alt={"product" + element.title}
+                    className="card-product__img"
+                    src={"/img/catalog/" + element.img}
+                    height="264"
+                    width="264" />
             </div>
             <div className="card-product__text-hold">
                 <a href="#" className="card-product__title-link">{element.title}</a>
